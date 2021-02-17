@@ -1,31 +1,26 @@
 # UW Homework: Basic Kotlin
-This homework is designed to force you to exercise your knowledge of the Kotlin programming language. This homework does not involve Android in any way, and uses Gradle from the command-line to host the `Homework.kt` file (which you will modify) and the `HomeworkTest.kt` file (which tests your code).
-
-If you do not see these files at first, you can find them here:
-
-* `src/main/kotlin/edu/uw/basic-kotlin/Homework.kt`
-* `src/test/kotlin/edu/uw/basic-kotlin/HomeworkTest.kt`
-
-Note that you will do all of your work in the `Homework.kt` file, and you should not need to modify anything in the `HomeworkTest.kt` file; in fact, modifying that file could jeopardize your grade! If you feel you need to make changes to it, contact the TA before doing so--chances are very good that the problem lies elsewhere.
+This homework is designed to force you to exercise your knowledge of the Kotlin programming language. This homework does not involve Android in any way.
 
 > Notes like this are intended to explain the intent or thinking behind parts of the homework assignment, and are not necessary to read in order to accomplish the homework's goals. Consider them "flavor text" if you want to understand more of the "why" behind what we are doing here.
 
-> For example, the one exception to the "don't modify `HomeworkTest.kt` would be if you wanted to *add* tests to the ones already there. Writing unit tests in Kotlin is outside the scope of this exercise, however, and while a useful learning tool, this is not something we expect you to be able to do yet. If you wish to persist, we will offer 1 point of extra credit if you can add 6 or more tests to the ones already there without changing the `Homework.kt` code we've asked you to write; in other words, no new functions or object properties or methods. Just test the ones already there.
+This homework uses Gradle from the command-line to host the `Homework.kt` file (which you will modify) and the `HomeworkTest.kt` file (which tests your code, and you should not modify).
 
-> Additionally, there is one exception to the "never modify `HomeworkTest.kt` file" rule, which I will point out below.
+> This assignment, and the one that follows, contains extensive instructions; future homework assignments will not, because I want to encourage you to solve problems your own way. This is just to get us started.
 
 ## Goal
-Your task is simple: Make the code compile, and make all the unit tests pass.
+Your task is simple: ***Make the code compile, and make all the unit tests pass.***
 
 ## Tools
-This project uses nothing about Android, so we will not use Android Studio for this project.
+This project uses nothing about Android, so we will not use Android Studio for this project. Instead, you will only need a good text editor. You could use Android Studio to edit the Kotlin source files, but it might give you some false errors about missing symbols and what-not; instead, consider using [Visual Studio Code](https://code.visualstudio.com/), which is a popular editor for many languages and all of the widely-used platforms (Windows, macOS, Linux).
 
-> You might be able to, in some ways, but I don't want to complicate things for this first project; I want you to focus exclusively on Kotlin. The Gradle wrapper, combined with a good text editor like Visual Studio Code, should be all you need for this assignment.
+> Other options include using [IntelliJ IDEA (Community Edition)](https://www.jetbrains.com/idea/download/), which is the base from which Android Studio is built, or some other text editor with IDE capabilities, like Eclipse, but in the end, knowing how to do a build from the command-line is useful, and I do want to try and keep things simple--believe it or not, what we're doing here is actually simpler than some options we could be using. As much as I can, I don't want to complicate things for this first project; I want you to focus exclusively on Kotlin. The Gradle wrapper, combined with a good text editor like Visual Studio Code, should be all you need for this assignment.
 
 ### Command line
 You will need only the command-line ("Terminal" on macOS, "Terminal" or "xTerm" on Linux, or "Command Prompt" on Windows). These should already be present on your system of choice.
 
 > Developers should always have a working knowledge of the command-line. You won't always need to use the command-line for everything, but you should at least be conversant with how it maps to your project inside of the IDE. It is a highly-useful skill to have, particularly when looking to automate certain tasks, and many companies' interviews will assume you have some knowledge of it.
+
+> Additionally, if you're on macOS, many developers like using [iTerm2](https://iterm2.com/downloads.html). Windows developers like the new [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701), which can wrap either the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or [Powershell](https://docs.microsoft.com/en-us/powershell/) (which already comes with modern builds of Windows 10). Getting to know these is useful, but certainly not required for this class.
 
 ### Git
 You will, however, need to have Git installed on your machine--if you are on macOS, Git will already be installed; on Windows, the standard Windows download for Git will include a "Git Prompt" which will include Git as part of the setup.
@@ -56,6 +51,20 @@ BUILD SUCCESSFUL in 537ms
 ```
 
 Right now, though, you will get a ton of errors; this is because the tests are trying to compile code that doesn't exist yet, because you haven't written it yet!
+
+## Now what?
+If you do not see the `Homework` and `HomeworkTest` files at first, you can find them here:
+
+* `src/main/kotlin/edu/uw/basic-kotlin/Homework.kt`
+* `src/test/kotlin/edu/uw/basic-kotlin/HomeworkTest.kt`
+
+Note that you will do all of your work in the `Homework.kt` file, and you should not need to modify anything in the `HomeworkTest.kt` file; in fact, modifying that file could jeopardize your grade! If you feel you need to make changes to it, contact the TA before doing so--chances are very good that the problem lies elsewhere.
+
+> For example, the one exception to the "don't modify `HomeworkTest.kt` would be if you wanted to *add* tests to the ones already there. Writing unit tests in Kotlin is outside the scope of this exercise, however, and while a useful learning tool, this is not something we expect you to be able to do yet. If you wish to persist, we will offer 1 point of extra credit if you can add 6 or more tests to the ones already there without changing the `Homework.kt` code we've asked you to write; in other words, no new functions or object properties or methods. Just test the ones already there.
+
+> Additionally, there is one exception to the "never modify `HomeworkTest.kt` file" rule, which I will point out below.
+
+
 
 > Remember when I said there was one exception to the "don't modify `HomeworkTest.kt` file" rule? Here it comes: When programming, it can often be *very* helpful to take the tasks that need to be done in small pieces, verify that part of it works, then move on to the next part. That will be hard with the way the tests are currently written. Thus, if you wish, you can go into the `HomeworkTest.kt` file, comment out the tests that are giving you errors inside the "HomeworkTest" class, and then run again. That will allow you to tackle each part independently--just don't forget to uncomment the test code, or it's a zero!
 
@@ -104,13 +113,13 @@ The third section is to explore classes. You are to create a standard "POJO"-typ
 
 The fourth section is to explore classes and operator overloading. Create a class, "Money", that has two properties, `amount` and `currency`. "Currency" can be one of "USD", "EUR", "CAN" and "GBP". "Amount" is a standard Int. Define the properties such that "amount" can never be less than zero, and that "currency" can only be one of those four symbols. Define a public method, `convert`, that takes a String argument for the currency type to convert to, and return a new Money instance with the amount converted. Conversion rates should be as follows: 
 
-* 10 USD converts to 5 GBP
+* 10 USD converts to 5 GBP (2 USD == 1 GBP)
 
-* 10 USD converts to 15 EUR
+* 10 USD converts to 15 EUR (2 USD == 3 EUR)
 
-* 12 USD converts to 15 CAN.
+* 12 USD converts to 15 CAN (4 USD == 5 CAN)
 
-(Make sure you can convert in both directions!) 
+(Make sure you can convert in both directions, and for all combinations, such as GBP to EUR, CAN to GBP, and so on!) 
 
 Define the `+` operator on Money to return a new instance of Money that adds the amount, converting the currency to the first (left-hand) Money's currency. So adding (10 USD) + (5 GBP) should return a result in USD. Similarly, adding (5 GBP) + (10 USD) should return the result in GBP. 
 

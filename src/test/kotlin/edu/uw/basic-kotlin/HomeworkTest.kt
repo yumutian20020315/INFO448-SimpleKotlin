@@ -12,7 +12,6 @@ class HomeworkTest {
         assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'")
     }
 
-/*
     // =================
     // whenFn tests
     @Test fun when_Hello() {
@@ -102,7 +101,8 @@ class HomeworkTest {
             Pair(tenUSD, fifteenEUR),
             Pair(twelveUSD, fifteenCAN),
             Pair(fiveGBP, tenUSD),
-            Pair(fiveGBP, fifteenEUR)
+            Pair(fiveGBP, fifteenEUR),
+            Pair(fifteenEUR, fiveGBP)
         )
         for ( (from,to) in tests) {
             assertEquals(to.amount, from.convert(to.currency).amount)
@@ -119,5 +119,4 @@ class HomeworkTest {
             assertEquals(result.currency, (pair.first + pair.second).currency)
         }
     }
-*/
 }
