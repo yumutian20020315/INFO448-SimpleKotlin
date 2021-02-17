@@ -35,7 +35,7 @@ The rest will be installed by the Gradle Wrapper script that is checked in as pa
 ## To obtain this code...
 ... you must first obtain a copy of the source. You do that by cloning this repository. Open a "Command Prompt" or "Terminal" instance and use:
 
-    git clone https://github.com/tedneward/uw-basickotlin basickotlin
+    git clone https://github.com/tedneward/uw-basic-kotlin basickotlin
 
 ... to do the deed. This will also create a local copy of the project on your machine in a directory called `basickotlin`.
 
@@ -60,13 +60,9 @@ If you do not see the `Homework` and `HomeworkTest` files at first, you can find
 
 Note that you will do all of your work in the `Homework.kt` file, and you should not need to modify anything in the `HomeworkTest.kt` file; in fact, modifying that file could jeopardize your grade! If you feel you need to make changes to it, contact the TA before doing so--chances are very good that the problem lies elsewhere.
 
-> For example, the one exception to the "don't modify `HomeworkTest.kt` would be if you wanted to *add* tests to the ones already there. Writing unit tests in Kotlin is outside the scope of this exercise, however, and while a useful learning tool, this is not something we expect you to be able to do yet. If you wish to persist, we will offer 1 point of extra credit if you can add 6 or more tests to the ones already there without changing the `Homework.kt` code we've asked you to write; in other words, no new functions or object properties or methods. Just test the ones already there.
+> One exception to the "don't modify `HomeworkTest.kt` would be if you wanted to *add* tests to the ones already there. Writing unit tests in Kotlin is outside the scope of this exercise, however, and while a useful learning tool, this is not something we expect you to be able to do yet. If you wish to persist, we will offer 1 point of extra credit if you can add 6 or more tests to the ones already there without changing the `Homework.kt` code we've asked you to write; in other words, no new functions or object properties or methods. Just test the ones already there.
 
-> Additionally, there is one exception to the "never modify `HomeworkTest.kt` file" rule, which I will point out below.
-
-
-
-> Remember when I said there was one exception to the "don't modify `HomeworkTest.kt` file" rule? Here it comes: When programming, it can often be *very* helpful to take the tasks that need to be done in small pieces, verify that part of it works, then move on to the next part. That will be hard with the way the tests are currently written. Thus, if you wish, you can go into the `HomeworkTest.kt` file, comment out the tests that are giving you errors inside the "HomeworkTest" class, and then run again. That will allow you to tackle each part independently--just don't forget to uncomment the test code, or it's a zero!
+> Additionally, when programming, it can often be *very* helpful to take the tasks that need to be done and break them into small pieces, verify that part of it works, then move on to the next part. That will be hard with the way the tests are currently written. Thus, if you wish, you can go into the `HomeworkTest.kt` file, comment out the tests that are giving you errors inside the "HomeworkTest" class, and then run again. That will allow you to tackle each part independently--just don't forget to uncomment the test code, or it's a zero!
 
 ## To make your changes and upload to your own GitHub account
 You can make changes to the code on your local machine, but you cannot just change the code in my project on GitHub; it will be the template for other UW classes in the future. To store your own changes to your own GitHub account, you need to set the "remote origin" for this code you just cloned. 
