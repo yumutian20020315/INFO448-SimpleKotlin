@@ -33,12 +33,17 @@ The rest will be installed by the Gradle Wrapper script that is checked in as pa
 > Gradle is a build tool, much like "make", "MSBuild", "Ant", and a whole host of others. Gradle scripts can be written in either Kotlin or Groovy (another language that runs on the JVM, like Kotlin). You won't need to understand much about Gradle (until maybe your final project in this class, when you might need to add some third-party libraries) to use it, so we won't spend a lot of time on it. There's a whole heap of interesting functionality buried within Gradle, however, and it can be very useful to know, particularly when you are trying to debug certain kinds of problems. It might help to go through the [Gradle Getting Started page](https://docs.gradle.org/current/userguide/getting_started.html) if you want to dive in.
 
 ## To obtain this code...
-... you must first obtain a copy of the source. You do that by cloning this repository. Open a "Command Prompt" or "Terminal" instance and use:
+... you must first obtain a copy of the source. You do that by cloning this repository. Two options are available to you:
 
-    git clone https://github.com/tedneward/uw-basic-kotlin basickotlin
+1. **Fork this repository.** From the GitHub repository web page, click "Fork" in the upper-right. This will create a copy of this repository in your own GitHub account. From there do a `git clone` from your own copy of the GitHub repository.
 
-... to do the deed. This will also create a local copy of the project on your machine in a directory called `basickotlin`.
+2. **Clone and re-home this repository.** Open a "Command Prompt" or "Terminal" instance and use:
 
+        git clone https://github.com/tedneward/INFO448-SimpleKotlin simplekotlin
+
+    ... to do the deed. This will also create a local copy of the project on your machine in a directory called `basickotlin`. You will also need to "re-home" your local copy so it points to your own GitHub account; you can do this by creating a repository of this same name (`INFO448-SimpleKotlin`) in your GitHub account and then executing `git remote set-url origin https://github.com/[your-ID]/INFO448-SimpleKotlin.git`. (Needless to say, it's a lot easier to fork the repo.)
+
+## To compile and run...
 To compile and run the tests, execute `gradlew` (if you are on macOS or Linux) or `gradlew.bat` (if you are on Windows), which will download and install a local copy of Gradle, and then pull down a host of plugins to build the app locally and then run the tests. (If you are on a macOS/Linux machine, you may need to explicitly reference the current directory when you run the `gradlew` script, so if `gradlew` by itself yields an error, try `./gradlew` instead.)
 
 Run `gradlew` or `gradlew.bat` now. You should see Gradle give you a greeting and then a series of things should be downloaded to your machine. It could take upwards of 20 to 30 seconds, or longer, depending on your Internet speeds.
@@ -63,26 +68,6 @@ Note that you will do all of your work in the `Homework.kt` file, and you should
 > One exception to the "don't modify `HomeworkTest.kt` would be if you wanted to *add* tests to the ones already there. Writing unit tests in Kotlin is outside the scope of this exercise, however, and while a useful learning tool, this is not something we expect you to be able to do yet. If you wish to persist, we will offer 1 point of extra credit if you can add 6 or more tests to the ones already there without changing the `Homework.kt` code we've asked you to write; in other words, no new functions or object properties or methods. Just test the ones already there.
 
 > Additionally, when programming, it can often be *very* helpful to take the tasks that need to be done and break them into small pieces, verify that part of it works, then move on to the next part. That will be hard with the way the tests are currently written. Thus, if you wish, you can go into the `HomeworkTest.kt` file, comment out the tests that are giving you errors inside the "HomeworkTest" class, and then run again. That will allow you to tackle each part independently--just don't forget to uncomment the test code, or it's a zero!
-
-## To make your changes and upload to your own GitHub account
-You can make changes to the code on your local machine, but you cannot just change the code in my project on GitHub; it will be the template for other UW classes in the future. To store your own changes to your own GitHub account, you need to set the "remote origin" for this code you just cloned. 
-
-To do that, you need to create a new repository in your account on GitHub (call it `basickotlin`), and then change the project's "remote origin" setting to point to that new repository as the remote origin. (If you don't do this, you will not have anything checked in online, and thus will have nothing turned in for the assignment!) To change the remote origin, use the following:
-
-    git remote set-url origin https://github.com/[your-ID]/basickotlin.git
-
-This will work regardless of whether you got the syntax of the URL correct or not, so do a quick push to make sure it all worked correctly:
-
-    git push
-
-Git will ask you for your username and password, then (if everything was done correctly), it will upload the code to the new repository, and this is your new "home" for this project going forward. Verify the files are there by viewing your GitHub project through the browser.
-
-***NOTE:*** Your grade for this assignment (and all future assignments) will be based on what we see in the GitHub repository, and nothing else. If it isn't in GitHub, it doesn't exist.
-
-> #### "... but I learned a different way to do this."
-> You are free to use whatever other means you like to clone the repo for your own use, of course, but this is what I've found works for classes in the past. Just remember, *you* are responsible for what's in your GitHub repo, so when in doubt, verify the contents and/or ask myself or the TA if we see the same contents that you do. 
-
-Remember Reagan's Maxim: ***[Trust but verify!](https://en.wikipedia.org/wiki/Trust,_but_verify)***
 
 ## The assignment
 The code is broken into a sequence of sections. Your job is to implement the body of each section, so that the tests will pass.
