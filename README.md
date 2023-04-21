@@ -1,4 +1,4 @@
-# UW Homework: Basic Kotlin
+# UW Homework: Simple Kotlin
 This homework is designed to force you to exercise your knowledge of the Kotlin programming language. This homework does not involve Android in any way.
 
 > Notes like this are intended to explain the intent or thinking behind parts of the homework assignment, and are not necessary to read in order to accomplish the homework's goals. Consider them "flavor text" if you want to understand more of the "why" behind what we are doing here.
