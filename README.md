@@ -41,7 +41,7 @@ The rest will be installed by the Gradle Wrapper script that is checked in as pa
 
         git clone https://github.com/tedneward/INFO448-SimpleKotlin simplekotlin
 
-    ... to do the deed. This will also create a local copy of the project on your machine in a directory called `basickotlin`. You will also need to "re-home" your local copy so it points to your own GitHub account; you can do this by creating a repository of this same name (`INFO448-SimpleKotlin`) in your GitHub account and then executing `git remote set-url origin https://github.com/[your-ID]/INFO448-SimpleKotlin.git`. (Needless to say, it's a lot easier to fork the repo.)
+    ... to do the deed. This will also create a local copy of the project on your machine in a directory called `simplekotlin`. You will also need to "re-home" your local copy so it points to your own GitHub account; you can do this by creating a repository of this same name (`INFO448-SimpleKotlin`) in your GitHub account and then executing `git remote set-url origin https://github.com/[your-ID]/INFO448-SimpleKotlin.git`. (Needless to say, it's a lot easier to fork the repo.)
 
 ## To compile and run...
 To compile and run the tests, execute `gradlew` (if you are on macOS or Linux) or `gradlew.bat` (if you are on Windows), which will download and install a local copy of Gradle, and then pull down a host of plugins to build the app locally and then run the tests. (If you are on a macOS/Linux machine, you may need to explicitly reference the current directory when you run the `gradlew` script, so if `gradlew` by itself yields an error, try `./gradlew` instead.)
