@@ -10,6 +10,20 @@ class Library {
 
 // write a "whenFn" that takes an arg of type "Any" and returns a String
 
+fun whenFn(a: Any): String {
+    return when(a) {
+        "Hello" -> "world"
+        0 -> "zero"
+        1 -> "one"
+        in 2..10 -> "low number"
+        is String -> "I do't understand"
+        is Number -> "a number"
+        "Howdy" -> "Say what?"
+        "Bonjour" -> "Say what?"
+        else -> "I do't understand"
+    }
+}
+
 // write an "add" function that takes two Ints, returns an Int, and adds the values
 
 // write a "sub" function that takes two Ints, returns an Int, and subtracts the values
